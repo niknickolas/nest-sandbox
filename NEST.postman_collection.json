@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "8c82166d-6a8b-4b63-8f3f-c8c7d9001d72",
+		"name": "NEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "SERVICE",
+					"item": [
+						{
+							"name": "CREATE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Test\",\n    \"description\":\"Test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ":3000/services",
+									"port": "3000",
+									"path": [
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ALL",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ":3000/services",
+									"port": "3000",
+									"path": [
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET BY ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ":3000/services/2",
+									"port": "3000",
+									"path": [
+										"services",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BAN USER",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": 1,\n    \"banReason\": \"Cool\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ":3000/services/2/banUser",
+									"port": "3000",
+									"path": [
+										"services",
+										"2",
+										"banUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET PUPULAR SERVICES",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ":3000/services/popular",
+									"port": "3000",
+									"path": [
+										"services",
+										"popular"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USER",
+					"item": [
+						{
+							"name": "CREATE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"test@test.com\",\n    \"name\":\"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ":3000/users",
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ALL",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ":3000/users",
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET BY ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ":3000/users/1",
+									"port": "3000",
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET SUBSCRIPTIONS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ":3000/users/1/services",
+									"port": "3000",
+									"path": [
+										"users",
+										"1",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CREATE SUBSCRIPTION",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"serviceId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ":3000/users/1/services",
+									"port": "3000",
+									"path": [
+										"users",
+										"1",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE SUBSCRIPTION",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ":3000/users/1/services/1",
+									"port": "3000",
+									"path": [
+										"users",
+										"1",
+										"services",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
